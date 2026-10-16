@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $update->execute([$_SERVER['REMOTE_ADDR'], $user['id']]);
 
                     // ✅ লগইন সফল হলে সরাসরি ড্যাশবোর্ডে নিয়ে যাবে
-                    header("Location: index.php");
+                    header("Location: admin.php");
                     exit();   // এটা খুব জরুরি
                 }
             } else {

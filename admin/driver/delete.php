@@ -9,7 +9,7 @@ if (isset($_GET['id'])) {
         $stmt = $pdo->prepare("DELETE FROM drivers WHERE id = ?");
         $stmt->execute([$id]);
 
-        header("Location: index.php?message=deleted");
+        header("Location: admin.php?page=admin/driver/index&deleted=1");
         exit;
     }
 }

@@ -982,51 +982,7 @@ function formValue($field, $edit_driver)
 
                 <!-- Gender -->
 
-                <div class="col-md-2">
-
-                    <label class="form-label">
-                        লিঙ্গ
-                    </label>
-
-                    <select
-                        name="gender"
-                        class="form-select"
-                    >
-
-                        <option value="">
-                            নির্বাচন করুন
-                        </option>
-
-                        <option
-                            value="Male"
-                            <?= formValue('gender', $edit_driver) === 'Male'
-                                ? 'selected'
-                                : '' ?>
-                        >
-                            পুরুষ
-                        </option>
-
-                        <option
-                            value="Female"
-                            <?= formValue('gender', $edit_driver) === 'Female'
-                                ? 'selected'
-                                : '' ?>
-                        >
-                            নারী
-                        </option>
-
-                        <option
-                            value="Other"
-                            <?= formValue('gender', $edit_driver) === 'Other'
-                                ? 'selected'
-                                : '' ?>
-                        >
-                            অন্যান্য
-                        </option>
-
-                    </select>
-
-                </div>
+   
 
 
                 <!-- Mobile -->
@@ -1058,53 +1014,7 @@ function formValue($field, $edit_driver)
 
                 <!-- Blood -->
 
-                <div class="col-md-2">
-
-                    <label class="form-label">
-                        রক্তের গ্রুপ <span class="required">*</span>
-                    </label>
-
-                    <select
-                        name="blood_group"
-                        class="form-select"
-                        required
-                    >
-
-                        <option value="">
-                            রক্তের গ্রুপ নির্বাচন করুন
-                        </option>
-
-                        <?php
-
-                        $blood_groups = [
-                            'A+',
-                            'A-',
-                            'B+',
-                            'B-',
-                            'AB+',
-                            'AB-',
-                            'O+',
-                            'O-'
-                        ];
-
-                        ?>
-
-                        <?php foreach ($blood_groups as $blood): ?>
-
-                            <option
-                                value="<?= e($blood) ?>"
-                                <?= formValue('blood_group', $edit_driver) === $blood
-                                    ? 'selected'
-                                    : '' ?>
-                            >
-                                <?= e($blood) ?>
-                            </option>
-
-                        <?php endforeach; ?>
-
-                    </select>
-
-                </div>
+         
 
 
                 <!-- Present Address -->
@@ -1175,7 +1085,7 @@ function formValue($field, $edit_driver)
                 <div class="col-md-4">
 
                     <label class="form-label">
-                        ব্যক্তির নাম
+                        ব্যক্তির নাম <span class="required">*</span>
                     </label>
 
                     <div class="input-icon">
@@ -1187,6 +1097,7 @@ function formValue($field, $edit_driver)
                             name="emergency_contact_name"
                             class="form-control"
                             placeholder="নাম"
+                            required
                             value="<?= e(formValue('emergency_contact_name', $edit_driver)) ?>"
                         >
 
@@ -1198,7 +1109,7 @@ function formValue($field, $edit_driver)
                 <div class="col-md-4">
 
                     <label class="form-label">
-                        সম্পর্ক
+                        সম্পর্ক <span class="required">*</span>
                     </label>
 
                     <div class="input-icon">
@@ -1207,6 +1118,7 @@ function formValue($field, $edit_driver)
 
                         <input
                             type="text"
+                            required
                             name="emergency_contact_relation"
                             class="form-control"
                             placeholder="যেমন: বাবা / স্ত্রী / ভাই"
@@ -1221,7 +1133,7 @@ function formValue($field, $edit_driver)
                 <div class="col-md-4">
 
                     <label class="form-label">
-                        মোবাইল নম্বর
+                        মোবাইল নম্বর <span class="required">*</span>
                     </label>
 
                     <div class="input-icon">
@@ -1230,6 +1142,7 @@ function formValue($field, $edit_driver)
 
                         <input
                             type="text"
+                            required
                             name="emergency_contact_mobile"
                             class="form-control"
                             placeholder="01XXXXXXXXX"
@@ -1270,12 +1183,13 @@ function formValue($field, $edit_driver)
                 <div class="col-md-4">
 
                     <label class="form-label">
-                        কর্মীর ধরন
+                        ডিউটি ধরন / কাজের ধরন<span class="required">*</span>
                     </label>
 
                     <select
                         name="employee_type"
                         class="form-select"
+                        required
                     >
 
                         <option value="">
@@ -1288,7 +1202,7 @@ function formValue($field, $edit_driver)
                                 ? 'selected'
                                 : '' ?>
                         >
-                            স্থায়ী
+                            পার্ট টাইম (ঘণ্টাপ্রতি/বদলি ডিউটি )
                         </option>
 
                         <option
@@ -1297,7 +1211,7 @@ function formValue($field, $edit_driver)
                                 ? 'selected'
                                 : '' ?>
                         >
-                            চুক্তিভিত্তিক
+                            ফুল টাইম (পারমানেন্ট)
                         </option>
 
                         <option
@@ -1306,29 +1220,76 @@ function formValue($field, $edit_driver)
                                 ? 'selected'
                                 : '' ?>
                         >
-                            খণ্ডকালীন
-                        </option>
+রাতের ডিউটি  (ঘণ্টাপ্রতি/বদলি ডিউটি )                        </option>
 
                     </select>
 
                 </div>
 
 
+            <div class="col-md-4">
+
+    <label class="form-label">
+        কি ধরণের গাড়ি চালানোর অভিজ্ঞতা আছে ? <span class="required">*</span>
+    </label>
+
+    <select
+        name="vehicle_type"
+        class="form-select"
+        required
+    >
+        <option value="">-- গাড়ির ধরন নির্বাচন করুন --</option>
+
+        <option value="মোটরসাইকেল"
+            <?= formValue('vehicle_type', $edit_driver) == 'মোটরসাইকেল' ? 'selected' : '' ?>>
+            মোটরসাইকেল
+        </option>
+
+        <option value="প্রাইভেট কার"
+            <?= formValue('vehicle_type', $edit_driver) == 'প্রাইভেট কার' ? 'selected' : '' ?>>
+            প্রাইভেট কার
+        </option>
+
+        <option value="মাইক্রোবাস"
+            <?= formValue('vehicle_type', $edit_driver) == 'মাইক্রোবাস' ? 'selected' : '' ?>>
+            মাইক্রোবাস
+        </option>
+
+        
+
+    </select>
+
+</div>
+
+
                 <div class="col-md-4">
 
                     <label class="form-label">
-                        যোগদানের তারিখ
+                       ড্রাইভিং অভিজ্ঞতা কত বছর <span class="required">*</span>
                     </label>
 
-                    <input
-                        type="date"
-                        name="joining_date"
-                        class="form-control"
-                        value="<?= e(formValue('joining_date', $edit_driver)) ?>"
-                    >
+                    <div class="input-icon">
+
+                        <i class="bi bi-cash-stack"></i>
+
+                        <input
+                            type="number"
+                            step="0"
+                            requied
+                            name="driving_experience"
+                            class="form-control"
+                            placeholder="0"
+                            value="<?= e(formValue('driving_experience', $edit_driver)) ?>"
+                        >
+
+                    </div>
 
                 </div>
 
+
+ 
+
+          
 
             </div>
 
@@ -1354,8 +1315,11 @@ function formValue($field, $edit_driver)
 
             </div>
 
+
             <div class="row g-4">
+
                 <!-- Profile -->
+
                 <div class="col-md-6">
 
                     <div class="upload-card">
@@ -1413,7 +1377,10 @@ function formValue($field, $edit_driver)
                     </div>
 
                 </div>
+
+
                 <!-- NID Front -->
+
                 <div class="col-md-6">
 
                     <div class="upload-card">
@@ -1469,7 +1436,10 @@ function formValue($field, $edit_driver)
                     </div>
 
                 </div>
+
+
                 <!-- NID Back -->
+
                 <div class="col-md-6">
 
                     <div class="upload-card">
@@ -1525,6 +1495,8 @@ function formValue($field, $edit_driver)
                     </div>
 
                 </div>
+
+
                 <!-- License Front -->
 
                 <div class="col-md-6">

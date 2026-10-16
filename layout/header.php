@@ -6,7 +6,9 @@
   <meta name="description" content="adminHMD professional admin dashboard template">
   <!-- favicon -->
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon.png">
-  <title>On Call Driverbd</title>
+<title>
+    <?= htmlspecialchars($page_title ?? 'Oncalldriverbd.com', ENT_QUOTES, 'UTF-8') ?>
+</title>
 
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/vendors/bootstrap-icons/bootstrap-icons.css">
