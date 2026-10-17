@@ -1,7 +1,7 @@
 <?php
 include './config/db.php';
 include './config/session_check.php';
-include './phplibary/libary.php';
+include './libary/common.php';
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");

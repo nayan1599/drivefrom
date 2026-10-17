@@ -47,6 +47,7 @@
     include './website/section/navbar.php';
     include './website/section/banner.php';
     include './website/section/order.php';
+     include './website/section/feeatured_vehicles.php';
     ?>
 
     <!-- Main Content Section -->

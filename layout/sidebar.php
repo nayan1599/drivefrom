@@ -66,7 +66,14 @@
                 <i class="bi bi-list me-2"></i>
                 Website Menu
             </a>
+   <!-- Website Menu -->
+            <a
+                class="nav-link"
+                href="admin.php?page=admin/website/homepage/index">
 
+                <i class="bi bi-list me-2"></i>
+                Home section
+            </a>
             <!-- Customer Trip Requests -->
             <a
                 class="nav-link"
