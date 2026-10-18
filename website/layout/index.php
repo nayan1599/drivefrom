@@ -51,6 +51,60 @@
     ?>
 
     <!-- Main Content Section -->
+
+<div class="container-fluid py-4">
+
+<?php
+
+// URL থেকে page নেওয়া
+$page = $_GET['page'] ?? 'home';
+
+// নিরাপত্তা যাচাই
+$page = trim($page, '/');
+
+// শুধু অনুমোদিত অক্ষর
+if (!preg_match('/^[a-zA-Z0-9_\/-]+$/', $page)) {
+    http_response_code(400);
+    exit('Invalid page request');
+}
+
+// .php একবার যোগ করা
+if (!str_ends_with($page, '.php')) {
+    $page .= '.php';
+}
+
+// website-এর page ফোল্ডারের absolute path
+$basePath = __DIR__ . '/page/';
+
+// সম্পূর্ণ ফাইলের path
+$pagePath = $basePath . $page;
+
+// ফাইল আছে কি না যাচাই
+if (is_file($pagePath)) {
+
+    include $pagePath;
+
+} else {
+
+    http_response_code(404);
+
+    echo '<div class="alert alert-danger">';
+    echo '<h4>Page Not Found!</h4>';
+    echo '<p>ফাইল পাওয়া যায়নি: ' .
+        htmlspecialchars($page, ENT_QUOTES, 'UTF-8') .
+        '</p>';
+    echo '<p>সঠিক ফাইলের অবস্থান যাচাই করুন।</p>';
+    echo '</div>';
+
+}
+
+?>
+
+</div>
+
+
+
+
     <main>
         <?php
         include './website/layout/main.php';
