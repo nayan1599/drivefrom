@@ -1,3 +1,3 @@
 <?php 
-include './website/layout/index.php';
+include './website/index.php';
 ?>
