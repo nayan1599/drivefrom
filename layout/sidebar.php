@@ -12,7 +12,7 @@
             </a>
         </div>
         <nav class="sidebar-nav p-3">
-      
+
             <a class="nav-link active" href="admin.php">
                 <i class="bi bi-speedometer2"></i> Dashboard
             </a>
@@ -34,149 +34,167 @@
 
 
 
-                <!-- Customer / Cars -->
+            <!-- Customer / Cars -->
 
-          <!-- ================= WEBSITE MANAGEMENT ================= -->
+            <!-- ================= WEBSITE MANAGEMENT ================= -->
 
-    <a
-        class="nav-link d-flex justify-content-between align-items-center"
-        data-bs-toggle="collapse"
-        href="#websiteMenu"
-        role="button"
-        aria-expanded="false"
-        aria-controls="websiteMenu">
+            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+                href="#websiteMenu" role="button" aria-expanded="false" aria-controls="websiteMenu">
 
-        <span>
-            <i class="bi bi-globe me-2"></i>
-            Website Management
-        </span>
+                <span>
+                    <i class="bi bi-globe me-2"></i>
+                    Website Management
+                </span>
 
-        <i class="bi bi-chevron-down toggle-icon"></i>
-    </a>
-
-    <div class="collapse" id="websiteMenu">
-
-        <div class="submenu">
-
-            <!-- Website Menu -->
-            <a
-                class="nav-link"
-                href="admin.php?page=admin/website/menu/index">
-
-                <i class="bi bi-list me-2"></i>
-                Website Menu
-            </a>
-   <!-- Website Menu -->
-            <a
-                class="nav-link"
-                href="admin.php?page=admin/website/homepage/index">
-
-                <i class="bi bi-list me-2"></i>
-                Home section
-            </a>
-            <!-- Customer Trip Requests -->
-            <a
-                class="nav-link"
-                href="admin.php?page=admin/website/onlinefrom/index">
-
-                <i class="bi bi-car-front me-2"></i>
-                Customer Trip Requests
+                <i class="bi bi-chevron-down toggle-icon"></i>
             </a>
 
-            <!-- Website Pages -->
-            <a
-                class="nav-link"
-                href="admin.php?page=admin/website/pages/index">
+            <div class="collapse" id="websiteMenu">
 
-                <i class="bi bi-file-earmark-text me-2"></i>
-                Website Pages
+                <div class="submenu">
+
+                    <!-- Website Menu -->
+                    <a class="nav-link" href="admin.php?page=admin/website/menu/index">
+
+                        <i class="bi bi-list me-2"></i>
+                        Website Menu
+                    </a>
+                    <!-- Website Menu -->
+                    <a class="nav-link" href="admin.php?page=admin/website/homepage/index">
+
+                        <i class="bi bi-list me-2"></i>
+                        Home section
+                    </a>
+                    <!-- Customer Trip Requests -->
+                    <a class="nav-link" href="admin.php?page=admin/website/onlinefrom/index">
+
+                        <i class="bi bi-car-front me-2"></i>
+                        Customer Trip Requests
+                    </a>
+
+                    <!-- Website Pages -->
+                    <a class="nav-link" href="admin.php?page=admin/website/pages/index">
+
+                        <i class="bi bi-file-earmark-text me-2"></i>
+                        Website Pages
+                    </a>
+
+                    <!-- Contact Messages -->
+                    <a class="nav-link" href="admin.php?page=admin/website/contact/index">
+
+                        <i class="bi bi-envelope me-2"></i>
+                        Contact Messages
+                    </a>
+
+                    <!-- Website Settings -->
+                    <a class="nav-link" href="admin.php?page=admin/website/settings/index">
+
+                        <i class="bi bi-gear me-2"></i>
+                        Website Settings
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= DRIVER MANAGEMENT ================= -->
+
+
+
+            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+                href="#driverMenu" role="button" aria-expanded="false" aria-controls="driverMenu">
+
+                <span>
+                    <i class="bi bi-person-vcard me-2"></i>
+                    Driver Management
+                </span>
+
+                <i class="bi bi-chevron-down toggle-icon"></i>
             </a>
 
-            <!-- Contact Messages -->
-            <a
-                class="nav-link"
-                href="admin.php?page=admin/website/contact/index">
+            <div class="collapse" id="driverMenu">
 
-                <i class="bi bi-envelope me-2"></i>
-                Contact Messages
+                <div class="submenu">
+
+                    <!-- All Drivers -->
+                    <a class="nav-link" href="admin.php?page=admin/driver/index">
+                        <i class="bi bi-people me-2"></i>
+                        All Drivers
+                    </a>
+
+                    <!-- Add Driver -->
+                    <a class="nav-link" href="admin.php?page=admin/driver/add">
+                        <i class="bi bi-person-plus me-2"></i>
+                        Add New Driver
+                    </a>
+
+                    <!-- Driver Applications -->
+                    <a class="nav-link" href="admin.php?page=admin/driver/applications">
+                        <i class="bi bi-file-earmark-person me-2"></i>
+                        Driver Applications
+                    </a>
+
+                    <!-- Driver Documents -->
+                    <a class="nav-link" href="admin.php?page=admin/driver/documents">
+                        <i class="bi bi-card-checklist me-2"></i>
+                        Driver Documents
+                    </a>
+
+                </div>
+
+
+
+
+
+
+            </div>
+            <!-- Booking Management --><!-- Booking Management -->
+            <a class="nav-link d-flex justify-content-between align-items-center" data-bs-toggle="collapse"
+                href="#bookingMenu" role="button" aria-expanded="false" aria-controls="bookingMenu">
+
+                <span>
+                    <i class="bi bi-calendar2-check me-2"></i>
+                   Booking Tracking 
+                </span>
+
+                <i class="bi bi-chevron-down toggle-icon"></i>
             </a>
+            <!-- Booking Submenu -->
+            <div class="collapse" id="bookingMenu">
 
-            <!-- Website Settings -->
-            <a
-                class="nav-link"
-                href="admin.php?page=admin/website/settings/index">
+                <div class="submenu">
 
-                <i class="bi bi-gear me-2"></i>
-                Website Settings
-            </a>
+                    <!-- All Bookings -->
+                    <a class="nav-link" href="admin.php?page=admin/booking/index">
+                        <i class="bi bi-calendar-check me-2"></i>
+                        All Bookings
+                    </a>
 
-        </div>
+                    <!-- Add New Booking -->
+                    <a class="nav-link" href="admin.php?page=admin/booking/add">
+                        <i class="bi bi-calendar-plus me-2"></i>
+                        Add New Booking
+                    </a>
 
-    </div>
- 
- 
-<!-- ================= DRIVER MANAGEMENT ================= -->
+                    <!-- Booking Reports -->
+                    <a class="nav-link" href="admin.php?page=admin/booking/reports">
+                        <i class="bi bi-file-earmark-bar-graph me-2"></i>
+                        Booking Reports
+                    </a>
 
- 
+                    <!-- Payment Tracking -->
+                    <a class="nav-link" href="admin.php?page=admin/booking/payments">
+                        <i class="bi bi-cash-stack me-2"></i>
+                        Payment Tracking
+                    </a>
 
-    <a
-        class="nav-link d-flex justify-content-between align-items-center"
-        data-bs-toggle="collapse"
-        href="#driverMenu"
-        role="button"
-        aria-expanded="false"
-        aria-controls="driverMenu">
+                </div>
 
-        <span>
-            <i class="bi bi-person-vcard me-2"></i>
-            Driver Management
-        </span>
+            </div>
 
-        <i class="bi bi-chevron-down toggle-icon"></i>
-    </a>
 
-    <div class="collapse" id="driverMenu">
 
-        <div class="submenu">
-
-            <!-- All Drivers -->
-            <a
-                class="nav-link"
-                href="admin.php?page=admin/driver/index">
-                <i class="bi bi-people me-2"></i>
-                All Drivers
-            </a>
-
-            <!-- Add Driver -->
-            <a
-                class="nav-link"
-                href="admin.php?page=admin/driver/add">
-                <i class="bi bi-person-plus me-2"></i>
-                Add New Driver
-            </a>
-
-            <!-- Driver Applications -->
-            <a
-                class="nav-link"
-                href="admin.php?page=admin/driver/applications">
-                <i class="bi bi-file-earmark-person me-2"></i>
-                Driver Applications
-            </a>
-
-            <!-- Driver Documents -->
-            <a
-                class="nav-link"
-                href="admin.php?page=admin/driver/documents">
-                <i class="bi bi-card-checklist me-2"></i>
-                Driver Documents
-            </a>
-
-        </div>
-
-    </div>
-
- 
- 
         </nav>
 
 

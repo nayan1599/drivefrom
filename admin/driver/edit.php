@@ -65,7 +65,7 @@ if (!$edit_driver) {
 
         <form
             method="POST"
-            action="index.php?page=sql/driver_update"
+            action="admin.php?page=sql/driver_update"
             enctype="multipart/form-data"
             class="driver-form"
         >
